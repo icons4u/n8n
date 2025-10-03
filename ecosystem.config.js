@@ -1,16 +1,3 @@
-// module.exports = {
-//   apps: [{
-//     name: 'n8n',
-//     script: './packages/cli/bin/n8n',
-//     env: {
-//       NODE_ENV: 'production',
-//       N8N_DISABLED_MODULES: 'insights'
-//     }
-//   }]
-// };
-
-// pm2 start config/ecosystem.config.js --env dev
-
 module.exports = {
 	apps: [
 		{
@@ -19,7 +6,7 @@ module.exports = {
 			watch: false,
 			interpreter: 'node@' + require('fs').readFileSync('.nvmrc', 'utf8').trim(),
 			env: {
-				N8N_DISABLED_MODULES: 'insights',
+				N8N_DISABLED_MODULES: 'insights,external-secrets,data-table,community-packages',
 				NODE_ENV: 'production',
 				N8N_LOG_LEVEL: 'debug',
 				XN8N_LOG_OUTPUT: 'console,file',
