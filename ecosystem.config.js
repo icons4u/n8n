@@ -6,7 +6,7 @@ module.exports = {
 			watch: false,
 			interpreter: 'node@' + require('fs').readFileSync('.nvmrc', 'utf8').trim(),
 			env: {
-				N8N_USER_FOLDER: '/home/web/n8n.dev.icons4u.com.br/.n8n',
+				N8N_USER_FOLDER: '/home/web/n8n.dev.icons4u.com.br',
 				N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: true,
 				N8N_DISABLED_MODULES: 'insights,external-secrets,data-table,community-packages',
 				NODE_ENV: 'production',
