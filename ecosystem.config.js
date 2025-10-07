@@ -2,15 +2,17 @@ module.exports = {
 	apps: [
 		{
 			name: 'n8n.dev.icons4u.com.br',
-			//script: 'packages/cli/bin/n8n',
+			// starting from npx
 			script: 'npx',
 			args: 'n8n',
+			// starting from the build
+			//script: 'packages/cli/bin/n8n',
 			watch: false,
 			interpreter: 'node@' + require('fs').readFileSync('.nvmrc', 'utf8').trim(),
 			env: {
 				N8N_USER_FOLDER: '/home/web/n8n.dev.icons4u.com.br',
 				N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: true,
-				N8N_DISABLED_MODULES: 'insights,external-secrets,data-table,community-packages',
+				//N8N_DISABLED_MODULES: 'insights,external-secrets,data-table,community-packages',
 				NODE_ENV: 'production',
 				N8N_LOG_LEVEL: 'debug',
 				XN8N_LOG_OUTPUT: 'console,file',
