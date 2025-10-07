@@ -2,7 +2,9 @@ module.exports = {
 	apps: [
 		{
 			name: 'n8n.dev.icons4u.com.br',
-			script: 'packages/cli/bin/n8n',
+			//script: 'packages/cli/bin/n8n',
+			script: 'npx',
+			args: 'n8n',
 			watch: false,
 			interpreter: 'node@' + require('fs').readFileSync('.nvmrc', 'utf8').trim(),
 			env: {
